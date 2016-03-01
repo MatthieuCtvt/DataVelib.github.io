@@ -10,14 +10,13 @@ require_once('scripts/logInOut.php');
 
 
 $askedPage = 'accueil';
-
+$pageTitle = getPageTitle($askedPage);
 generateHTMLHeader($pageTitle);
-
 
 generateMenu3($askedPage);
 echo "<br>";
 
-    require("content/contenu_$askedPage.php");
+require("content/contenu_$askedPage.php");
 
 generateHTMLFooter();
 ?>
