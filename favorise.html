@@ -27,6 +27,11 @@
                         marker.bindPopup("Notre Dame de Paris")
                               .on('mouseover', function(e){ marker.openPopup(); })
                               .on('mouseout', function(e){ marker.closePopup(); });
+                              
+                        var marker = L.marker([48.8571, 2.3417]).addTo(map);
+                        marker.bindPopup("Ile de la Cite - Pont neuf")
+                              .on('mouseover', function(e){ marker.openPopup(); })
+                              .on('mouseout', function(e){ marker.closePopup(); });
                 </script>
         </body>
 </html>
