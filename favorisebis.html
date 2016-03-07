@@ -20,7 +20,11 @@
                 <script type="text/javascript">
                         var map = L.map('map').setView([48.856578, 2.351828], 13);
                         L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: 'Map data &copy; <a href="http://www.osm.org">OpenStreetMap</a>' }).addTo(map);
-
+                        
+                          GET https://api.jcdecaux.com/vls/v1/stations?contract={contract_name}&apiKey={b979041550e0fe8a004a0365a671fdbb16d06cd5}
+                        HTTP/1.1 200 OK
+                        Content-Type: application/json
+                        station_jsonAccept: application/json
 
 
                 <!-- Stations du 1er arrondissement de Paris--> 
