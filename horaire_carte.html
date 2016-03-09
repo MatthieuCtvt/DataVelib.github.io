@@ -177,7 +177,11 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 
 	info.update = function (props) {
      this._div.innerHTML =   (props ?
-                              '<div style="width:300px;"><span style="font-family:Patua One;font-size:1em;">BUREAU : ' + props.nom + '</span>&nbsp;(' + props.associant + ')<br><span style="color:#08519c;">Jean-Luc Moudenc (UMP)&nbsp;: ' + props.jean_luc_moudenc + '&nbsp;%</span><br><span style="color:#dd3497;">Pierre Cohen (PS)&nbsp;: ' + props.pierre_cohen + '&nbsp%</span></div>'
+     
+                              /*'<div style="width:300px;"><span style="font-family:Patua One;font-size:1em;">BUREAU : ' + props.nom + '</span>&nbsp;(' + props.associant + ')<br><span style="color:#08519c;">Jean-Luc Moudenc (UMP)&nbsp;: ' + props.jean_luc_moudenc + '&nbsp;%</span><br><span style="color:#dd3497;">Pierre Cohen (PS)&nbsp;: ' + props.pierre_cohen + '&nbsp%</span></div>'
+                                                                                                                          : '<h4>Passez votre souris au dessus des bureaux de vote</h4>');*/
+                              
+                              '<div style="width:300px;"><span style="font-family:Patua One;font-size:1em;">Quartier : ' + props.nom + '</span>&nbsp;<br><span style="color:#08519c;">Horaire de départ : ' + props.heureDepart + ' h</div>'
                                                                                                                           : '<h4>Passez votre souris au dessus des bureaux de vote</h4>');
 	};
 	info.addTo(map);
