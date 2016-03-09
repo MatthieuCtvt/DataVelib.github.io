@@ -183,12 +183,12 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 	
 	// couleur en fonction du score des deux candidats
 	function getColor(d) {
-		return d > 70  ? '#3182bd' :
-		       d > 60  ? '#6baed6' :
-		       d > 50  ? '#bdd7e7' :
-		       d > 40  ? '#fa9fb5' :
-		       d > 30  ? '#f768a1' :
-		       d > 20  ? '#dd3497' :
+		return d > 11  ? '#3182bd' :
+		       d > 10  ? '#6baed6' :
+		       d > 9  ? '#bdd7e7' :
+		       d > 8  ? '#fa9fb5' :
+		       d > 7  ? '#f768a1' :
+		       d > 6  ? '#dd3497' :
 		                 '#ae017e';
 	}
 
@@ -199,7 +199,7 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 			color: 'white',
 			dashArray: '3',
 			fillOpacity: 1,
-			fillColor: getColor(feature.properties.jean_luc_moudenc)
+			fillColor: getColor(feature.properties.heureDepart)
 		};
 	}
 
