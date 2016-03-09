@@ -20,10 +20,10 @@
 <script type="text/javascript" src="http://data.passiondataviz.fr/js/leaflet.js"></script>
 <script type="text/javascript" src="http://data.passiondataviz.fr/js/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="http://data.passiondataviz.fr/js/Control.TouchHover.js"></script>
-<script type="text/javascript" src="js/TileLayer.d3_geoJSON.js"></script>
+<script type="text/javascript" src="http://cartes.passiondataviz.fr/toulouse2014/js/TileLayer.d3_geoJSON.js"></script>
 <script type="text/javascript" src="http://cartes.passiondataviz.fr/toulouse2014/toulouse2014.geojson"></script>
 
-
+<!-- ################# STYLE ###################################-->
 <style type="text/css">
 html, body { height: 100% }
 #map { min-height: 100%; }
@@ -131,10 +131,10 @@ path { stroke-linejoin; round; stroke-linecap: round;}
 path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:none}
 
 </style>
-
+<!-- ###########################################################-->
 </head><body>
 
-	
+<!-- ################# LEGEND ##################################-->	
 <div id="map">	  
 	<div style="position:absolute; bottom:3px; left:5px; display:block; border:none; z-index:1000000;"><a href="http://passiondataviz.fr/" target="_top"><img width="35" height="35" src="http://data.passiondataviz.fr/i/coeurcarte.png" style="position:absolute; bottom:3px; left:5px; display:block; width:35px!important; height:35px!important; border:none; outline:none;" alt="Passion dataviz"></a>
 	</div>
@@ -151,6 +151,10 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 	</div>
 					
 </div>
+<!-- ################################################################################## -->
+
+<!-- ########################  REGLAGE DE LA MAP ##################################### -->
+<!-- Ex : centre init / zoom min et max / couleur en fonction de la valeur / route et batiment -->
 <script>
 
 // On monte la carte, et on centre sur Toulouse
@@ -269,6 +273,7 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 
  new L.geoJson({"type": "LineString","coordinates":[[0,0],[0,0]]}).addTo(map);
 
+
 var landColors = {
   "farm": 0,
   "meadow": 0,
@@ -330,6 +335,8 @@ var topLayer = new L.tileLayer('http://{s}.tile.stamen.com/toner-labels/{z}/{x}/
 **/
 
 </script>
+<!-- ################################################################################## -->
+<!-- ################# GGOGLE ANALYTICS ############################################### -->
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -343,5 +350,5 @@ var topLayer = new L.tileLayer('http://{s}.tile.stamen.com/toner-labels/{z}/{x}/
   })();
 
 </script>
-
+<!-- ################################################################################## -->
 </body></html>
