@@ -188,14 +188,13 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 	
 	// couleur en fonction du score des deux candidats
 	function getColor(d) {
-		return
-		       d >= 10  ? '#e6f0ff' :
-		       d >= 9.66 ? '#99c2ff' : 
-		       d >= 9.33 ? '#3385ff' : 
-		       d >= 9  ? '#0066ff' :
-		       d>= 8.66 ? '#0052cc' : 
-		       d >= 8.33 ? '#003d99' :
-		       d >=8 ? '#002966' :
+		return d > 9.99  ? '#e6f0ff' :
+		       d > 9.65 ? '#99c2ff' : 
+		       d > 9.32 ? '#3385ff' : 
+		       d > 8.99  ? '#0066ff' :
+		       d> 8.65 ? '#0052cc' : 
+		       d > 8.32 ? '#003d99' :
+		       d > 7.99 ? '#002966' :
 		                 '#98FB98';
 	}
 
