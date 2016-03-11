@@ -181,20 +181,23 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
                               /*'<div style="width:300px;"><span style="font-family:Patua One;font-size:1em;">BUREAU : ' + props.nom + '</span>&nbsp;(' + props.associant + ')<br><span style="color:#08519c;">Jean-Luc Moudenc (UMP)&nbsp;: ' + props.jean_luc_moudenc + '&nbsp;%</span><br><span style="color:#dd3497;">Pierre Cohen (PS)&nbsp;: ' + props.pierre_cohen + '&nbsp%</span></div>'
                                                                                                                           : '<h4>Passez votre souris au dessus des bureaux de vote</h4>');*/
                               
-                              '<div style="width:300px;"><span style="font-family:Patua One;font-size:1em;">Quartier : ' + props.nom + '</span>&nbsp;<br><span style="color:#08519c;">Horaire de départ : ' + props.heureDepart + ' h</div>'
+                              '<div style="width:300px;"><span style="font-family:Patua One;font-size:1em;">Quartier : ' + props.nom + '</span>&nbsp;<br><span style="color:#08519c;">Horaire de départ : ' + props.heureDepart_string + ' h</div>'
                                                                                                                           : '<h4>Passez votre souris au dessus des bureaux de vote</h4>');
 	};
 	info.addTo(map);
 	
 	// couleur en fonction du score des deux candidats
 	function getColor(d) {
-		return d > 11  ? '#3182bd' :
-		       d > 10  ? '#6baed6' :
-		       d > 9  ? '#bdd7e7' :
-		       d > 8  ? '#fa9fb5' :
-		       d > 7  ? '#f768a1' :
-		       d > 6  ? '#dd3497' :
-		                 '#ae017e';
+		return d >= 11  ? '#cce0ff' :
+		       d >= 10  ? '#cce0ff' :
+		       d >= 9.5 ? '#99c2ff' : 
+		       d >= 9  ? '#66a3ff' :
+		       d >= 8.5 ? '#3385ff' :
+		       d >=8 ? '#0066ff' :
+		       d >= 7.5  ? '#0052cc' :
+		       d >= 7  ? '#003d99' :
+		       d >= 6  ? '#002966' :
+		                 '#F8F8FF';
 	}
 
 	function style(feature) {
