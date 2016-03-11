@@ -161,7 +161,7 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 // On monte la carte, et on centre sur Toulouse
 	var map = L.map('map', { minZoom: 12, maxZoom: 16} );
 	
-	map.setView([48.857807, 2.333033], 13);
+	map.setView([48.857807, 2.333033], 12);
 	if (L.Browser.touch) {
 		L.control.touchHover().addTo(map);
 	}
