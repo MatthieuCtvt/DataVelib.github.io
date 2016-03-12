@@ -141,6 +141,7 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 	</div>
 					
 	<div class="info legend leaflet-control" style="position:absolute; bottom:10px; right:10px; display:block; z-index:1000000;width:auto;">
+		<!--
 		Jean-Luc Moudenc (UMP)&nbsp;:<br>
 		<i style="background:#3182bd"></i> 70&nbsp;% et plus<br>
 		<i style="background:#6baed6"></i> 60&nbsp;-&nbsp;70&nbsp;%<br>
@@ -149,6 +150,15 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 		<i style="background:#dd3497"></i> 70&nbsp;% et plus<br>
 		<i style="background:#f768a1"></i> 60&nbsp;-&nbsp;70&nbsp;%<br>
 		<i style="background:#fa9fb5"></i> 50&nbsp;-&nbsp;60&nbsp;%<br>
+		-->
+		Légende  : <br>
+		<i style="background:#e6fff5"></i> 9h40 et plus<br>
+		<i style="background:#80aaff"></i> 9h00 - 9h40<br>
+		<i style="background:#004de6"></i> 8h40 - 9h00<br>
+		<i style="background:#002b80"></i> 8h20 - 8h40<br>
+		<i style="background:#00091a"></i> 7h40 - 8h20<br>
+		<i style="background:#660066"></i> Aucun départ visible<br>
+		                 
 	</div>
 					
 </div>
@@ -182,7 +192,7 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
                                                                                                                           : '<h4>Passez votre souris au dessus des bureaux de vote</h4>');*/
                               
                               '<div style="width:300px;"><span style="font-family:Patua One;font-size:1em;">Quartier : ' + props.nom + '</span>&nbsp;<br><span style="color:#08519c;">Horaire de départ : ' + props.heureDepart_string + '</div>'
-                                                                                                                          : '<h4>Passez votre souris au dessus des bureaux de vote</h4>');
+                                                                                                                          : '<h4>Passez votre souris au dessus des bureaux d'un quartier</h4>');
 	};
 	info.addTo(map);
 	
