@@ -162,12 +162,12 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 		<i style="background:#660066"></i> Aucun départ visible<br>
 		-->
 		Légende  : <br>
-		<i style="background:#0000ff"></i> 9h40 et plus<br>
-		<i style="background:#0060ff"></i> 9h00 - 9h40<br>
-		<i style="background:#0090ff"></i> 8h40 - 9h00<br>
-		<i style="background:#00c0ff"></i> 8h20 - 8h40<br>
-		<i style="background:#00ffff"></i> 7h40 - 8h20<br>
-		<i style="background:#daa520"></i> Travail<br>
+		<i style="background:#0000ff"></i> Après 9h30<br>
+		<i style="background:#0060ff"></i> 9h00 - 9h30<br>
+		<i style="background:#0090ff"></i> 8h45 - 9h00<br>
+		<i style="background:#00c0ff"></i> 8h30 - 8h45<br>
+		<i style="background:#00e0ff"></i> Avant 8h30<br>
+		<i style="background:#daa520"></i> Lieux de travail<br>
 		                 
 	</div>
 					
@@ -218,13 +218,11 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 	//	                 '#660066';
 	//}
 	 function getColor(d) {
-		return d > 9.99  ? '#0000ff' :
-		       d > 9.65 ? '#0000ff' : 
-		       d > 9.32 ? '#0060ff' : 
+		return d > 9.50  ? '#0000ff' :
 		       d > 8.99  ? '#0060ff' :
-		       d> 8.65 ? '#0090ff' : 
-		       d > 8.32 ? '#00c0ff' :
-		       d > 6 ? '#00ffff' :
+		       d> 8.75 ? '#0090ff' : 
+		       d > 8.50 ? '#00c0ff' :
+		       d > 6 ? '#00e0ff' :
 		                 '#daa520';
 	}
 
