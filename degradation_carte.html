@@ -219,9 +219,11 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 	//	                 '#660066';
 	//}
 	 function getColor(d) {
-		return d > 0.2  ? '#800000' :
-		       d > 0.1 ? '#e60000' : 
-		       d > 0.05 ? '#ff4d4d' : 
+		return d > 1  ? '#800000' :
+		       d > 0.1  ? '#800000' :
+		       d > 0.03  ? '#800000' :
+		       d > 0.01 ? '#e60000' : 
+		       d > 0 ? '#ff4d4d' : 
 		       d > -1  ? '#ffcccc' :
 		       '#ffcccc';
 	}
