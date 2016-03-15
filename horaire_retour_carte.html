@@ -22,7 +22,7 @@
 <script type="text/javascript" src="http://data.passiondataviz.fr/js/Control.TouchHover.js"></script>
 <script type="text/javascript" src="http://cartes.passiondataviz.fr/toulouse2014/js/TileLayer.d3_geoJSON.js"></script>
 <!-- <script type="text/javascript" src="http://cartes.passiondataviz.fr/toulouse2014/toulouse2014.geojson"></script> -->
-<script type="text/javascript" src="http://matthieuctvt.github.io/data_departBoulot.json"></script> 
+<script type="text/javascript" src="http://matthieuctvt.github.io/data_tot.json"></script> 
 <!--<script type="text/javascript" src="http://matthieuctvt.github.io/map2.json"></script>-->
 
 <!-- ################# STYLE ###################################-->
@@ -201,7 +201,7 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
                               /*'<div style="width:300px;"><span style="font-family:Patua One;font-size:1em;">BUREAU : ' + props.nom + '</span>&nbsp;(' + props.associant + ')<br><span style="color:#08519c;">Jean-Luc Moudenc (UMP)&nbsp;: ' + props.jean_luc_moudenc + '&nbsp;%</span><br><span style="color:#dd3497;">Pierre Cohen (PS)&nbsp;: ' + props.pierre_cohen + '&nbsp%</span></div>'
                                                                                                                           : '<h4>Passez votre souris au dessus des bureaux de vote</h4>');*/
                               
-                              '<div style="width:300px;"><span style="font-family:Patua One;font-size:1em;">Quartier : ' + props.nom + '</span>&nbsp;<br><span style="color:#08519c;">Horaire de départ : ' + props.heureDepart_string + '</div>'
+                              '<div style="width:300px;"><span style="font-family:Patua One;font-size:1em;">Quartier : ' + props.nom + '</span>&nbsp;<br><span style="color:#08519c;">Horaire de départ : ' + props.heureRetour_string + '</div>'
                                                                                                                           : "<h4>Passez votre souris au dessus d'un quartier</h4>");
 	};
 	info.addTo(map);
@@ -218,13 +218,13 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 	//	                 '#660066';
 	//}
 	 function getColor(d) {
-		return d > 9.99  ? '#0000ff' :
-		       d > 9.65 ? '#0000ff' : 
-		       d > 9.32 ? '#0060ff' : 
-		       d > 8.99  ? '#0060ff' :
-		       d> 8.65 ? '#0090ff' : 
-		       d > 8.32 ? '#00c0ff' :
-		       d > 6 ? '#00ffff' :
+		return d > 19.9  ? '#0000ff' :
+		       d > 19.9 ? '#0000ff' : 
+		       d > 18.9 ? '#0060ff' : 
+		       d > 17.9  ? '#0060ff' :
+		       d> 16.9 ? '#0090ff' : 
+		       d > 15.9 ? '#00c0ff' :
+		       d > 15 ? '#00ffff' :
 		                 '#daa520';
 	}
 
@@ -235,7 +235,7 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 			color: 'white',
 			dashArray: '3',
 			fillOpacity: 1,
-			fillColor: getColor(feature.properties.heureDepart)
+			fillColor: getColor(feature.properties.heureRetour)
 		};
 	}
 
