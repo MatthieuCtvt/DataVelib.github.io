@@ -13,3 +13,18 @@
     text-shadow: black 0.3em 0.3em 0.3em;
     background : transparent;
 }
+
+.btn-serieux1{
+    color :#FFFFFF;
+    background-color:#AA1122;
+    font-family: 'Dosis', cursive;
+    font-size: medium;
+    
+}
+
+.btn-serieux2{
+    color :#AA1122;
+    background-color:#FFFFFF;
+    font-family: 'Dosis', cursive;
+    font-size: large;
+}
