@@ -6,6 +6,12 @@
     text-shadow: #ffffff 0.7px 0.7px, #ffffff -0.7px 0.7px, #ffffff -0.7px -0.7px, #ffffff 0.7px -0.7px;
          }
          
+.accueil{
+    font-family: 'Dosis', cursive;
+    color:white;
+    text-shadow: #000000 0.5px 0.5px, #000000 -0.5px 0.5px, #000000 -0.5px -0.5px, #000000 0.5px -0.5px;
+         }
+         
 .jumbotron {
     margin-bottom: 0px;
     height: 370px;
