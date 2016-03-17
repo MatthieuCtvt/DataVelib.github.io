@@ -163,11 +163,11 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 		<i style="background:#660066"></i> Aucun départ visible<br>
 		-->
 		Retour du travail : <br>
-		<i style="background:#00c0ff"></i> Avant 17h30<br>
-		<i style="background:#0060ff"></i> 17h30 - 18h15<br>
-		<i style="background:#0030ff"></i> 18h15 - 20h<br>
-		<i style="background:#0000ff"></i> Après 20h<br>
-		<i style="background:#daa520"></i> Lieux de travail<br>
+		<i style="background:#f0a0a0"></i> Avant 17h30<br>
+		<i style="background:#f08080"></i> 17h30 - 18h15<br>
+		<i style="background:#f05050"></i> 18h15 - 20h<br>
+		<i style="background:#f02020"></i> Après 20h<br>
+		<i style="background:#603020"></i> Lieux de travail<br>
 		                 
 	</div>
 					
@@ -218,11 +218,11 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 	//	                 '#660066';
 	//}
 	 function getColor(d) {
-		return d > 20 ? '#0000ff' : 
-		       d > 18.25 ? '#0030ff' : 
-		       d > 17.5  ? '#0060ff' :
-		       d > 15 ? '#00c0ff' :
-		                 '#daa520';
+		return d > 20 ? '#f02020' : 
+		       d > 18.25 ? '#f05050' : 
+		       d > 17.5  ? '#f08080' :
+		       d > 15 ? '#f0a0a0' :
+		                 '#603020';
 	}
 
 	function style(feature) {
