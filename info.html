@@ -55,28 +55,22 @@
         <div class="col-lg-4 text-accueil">
             <center><img src="/reveil3.png" height="120" alt="Generic placeholder image"></center>
             <h3 class="font">Les quartiers qui se lèvent tôt !</h3>
-            <p class="font">On récupère les données d'une «journée-type» d’utilisation des vélibs : dates de la semaine sélectionnée.  Ensuite, on traite les données en essayant de repérer l’horaire de la "chute" du nombre de vélibs le matin. Une fois cette heure identifiée pour chaque station, et on associe à chaque quartier une heure moyenne de départ au travail. Les quartiers pour lesquels nous n'observons pas une chute du nombre de vélos le matin sont donc considérés comme des quartiers où l'on trouve principalement les lieux de travail. Ce sont donc bien nos données qui déterminent l'ensemble des informations contenues sur la carte, on conserve donc l’objectivité des données.</p>
+            <p class="font">On récupère les données d'une «journée-type» d’utilisation des vélibs : date de la journée sélectionnée.  Ensuite, on traite les données en essayant de repérer l’horaire de la "chute" du nombre de vélibs le matin pour chaque station. Une fois cette heure identifiée, on peut alors calculer une heure moyenne de départ pour chaque quartier de Paris. Les quartiers pour lesquels nous n'observons pas une chute du nombre de vélos le matin sont donc considérés comme des quartiers où l'on trouve principalement des lieux de travail.</p>
             <center><p><a class="btn btn-serieux1" href="horaire.html" role="button">C'est parti ! &raquo;</a></p></center>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4 text-accueil">
             <center><img src="/biere.png" height="120" alt="Generic placeholder image"></center>
             <h3 class="font">Qui rentre tôt du boulot ?</h3>
-            <p class="font">Découvrez où vivent les parisiens qui rentrent le plus tôt du travail !</p>
+            <p class="font">On récupère les données d'une «journée-type» d’utilisation des vélibs : date de la journée sélectionnée.  Ensuite, on traite les données en essayant de repérer l’horaire de la "montée" du nombre de vélibs le soir pour chaque station. Une fois cette heure identifiée, on peut alors calculer une heure moyenne de retour pour chaque quartier de Paris. Les quartiers pour lesquels nous n'observons pas une montée du nombre de vélos le soir sont donc considérés comme des quartiers où l'on trouve principalement des lieux de travail.</p>
             <center><p><a class="btn btn-serieux1" href="horaire.html" role="button">C'est parti ! &raquo;</a></p></center>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4 text-accueil">
             <center><img  src="/hache.png" height="120" alt="Generic placeholder image"></center>
             <h3 class="font">Qui casse les Velibs ?</h3>
-            <p class="font">Habitez-vous dans un quartier où les velibs sont souvent cassés ? Vos voisins sont-ils soigneux ?</p>
+            <p class="font">On récupère les données d'une «semaine-type» d’utilisation des vélibs : date de la journée sélectionnée.  Ensuite, on traite les données en calculant la moyenne du nombre de vélibs dégradés pour chaque station. Une fois cette heure identifiée, on peut alors calculer un taux moyen de dégradation pour chaque quartier de Paris.</p>
             <center><p><a class="btn btn-serieux1" href="degradation.html" role="button">C'est parti ! &raquo;</a></p></center>
         </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
-    <div>
-    <h1 class="font info">On récupère les données d'une semaine type d'utilisation des vélibs : dates de la semaine sélectionnée </h1>
-    <p class="font info">On traite les données : pour les dégradations on fait une moyenne sur la semaine, pour les départs et retours du travail, on observe la "chute" du nombre de vélibs, on identifie l'heure de cette chute, et on associe donc à chaque quartier une heure moyenne de départ au travail.</p>
-    <p class="font info">Les quartiers pour lesquels on n'observe pas une chute du nombre de vélos le matin sont donc considérés comme des quartiers où l'on trouve principalement les lieux de travail. Ce sont donc bien nos données qui déterminent l'ensemble des informations contenues sur la carte.</p>
-    <p class="font info">A partir de ces valeurs moyennes calculées, on construit donc la carte des quartiers. </p>
-    </div>
     <!-- FOOTER -->
     <footer class="text-accueil">
         <p>&copy; 2016 Data-Velib</p>
