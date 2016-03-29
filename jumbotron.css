@@ -40,3 +40,7 @@
 .info{
    margin-top: 3cm;
 }
+
+.transpa img{
+         opacity: 0.5;
+}
