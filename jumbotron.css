@@ -5,7 +5,7 @@
     color:black;
     text-shadow: #ffffff 0.7px 0.7px, #ffffff -0.7px 0.7px, #ffffff -0.7px -0.7px, #ffffff 0.7px -0.7px;
     text-align:justify
-    padding: 5px;
+    padding: 10px;
          }
 
          
@@ -14,14 +14,14 @@
     font-size: 20px;
     color:black;
     text-align:justify
-    padding: 5px;
+    padding: 10px;
          }
          
 .font2{
     font-family: 'Dosis', cursive;
     color:black;
     text-shadow: #ffffff 0.7px 0.7px, #ffffff -0.7px 0.7px, #ffffff -0.7px -0.7px, #ffffff 0.7px -0.7px;
-    padding: 5px;
+    padding: 10px;
          }
          
 .accueil{
