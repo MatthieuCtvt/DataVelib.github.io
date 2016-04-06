@@ -3,7 +3,9 @@
 footer{
    margin-top: 2cm;
 } 
- 
+.titre{
+ margin-bottom: 10px;
+} 
    
 .font{
     font-family: 'Dosis', cursive;
@@ -33,7 +35,7 @@ footer{
    font-family: 'Dosis', cursive;
    font-size: 20px;
    color:black;
-   text-align:justify
+   text-align:justify;
    margin-bottom: 10px;
 }         
          
