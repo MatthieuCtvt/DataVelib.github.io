@@ -29,8 +29,12 @@ footer{
     padding: 10px;
          }
          
-.space{
-   margin-bottom: 2cm;
+.lastp{
+   font-family: 'Dosis', cursive;
+   font-size: 20px;
+   color:black;
+   text-align:justify
+   margin-bottom: 10px;
 }         
          
          
