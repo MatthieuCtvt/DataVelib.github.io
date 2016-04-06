@@ -1,4 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Dosis);
+ 
+footer{
+   margin-top: 2cm;
+} 
+ 
    
 .font{
     font-family: 'Dosis', cursive;
@@ -23,6 +28,11 @@
     text-shadow: #ffffff 0.7px 0.7px, #ffffff -0.7px 0.7px, #ffffff -0.7px -0.7px, #ffffff 0.7px -0.7px;
     padding: 10px;
          }
+         
+.space{
+   margin-bottom: 2cm;
+}         
+         
          
 .accueil{
     font-family: 'Dosis', cursive;
