@@ -141,7 +141,7 @@
             }
             .text .post-inner h3 {
                 font-family:Dosis;
-                padding:0 0 5px;
+                padding:0 0 10px;
                 margin:0;
                 font-size:28px;
                 font-weight:400;
@@ -153,11 +153,11 @@
             .text .post-inner a:hover {color:#34495e;text-decoration:underline;}
             .text .post-inner h3 a {color:#34495e;}
             .text .post-inner h3 a:hover {color:#2980b9}
-            .text .post-inner p {padding:0 0 8px;margin:0;color:#000;text-decoration:none;letter-spacing:-0.5px;}
-            .text .post-inner ol {list-style-position:inside;padding:0;margin:0 0 8px;}
-            .text .post-inner ul {list-style-type:circle;list-style-position:inside;padding:0;margin:0 0 8px;}
+            .text .post-inner p {padding:0 0 15px;margin:0;color:#000;text-decoration:none;letter-spacing:-0.5px;}
+            .text .post-inner ol {list-style-position:inside;padding:0;margin:0 0 15px;}
+            .text .post-inner ul {list-style-type:circle;list-style-position:inside;padding:0;margin:0 0 15px;}
             .text .post-inner ol li, .text .post-inner ul li {color:#34495e;}
-            .text .post-inner blockquote {padding:0 0 0 10px;margin:0 0 8px;border-left:2px solid #34495e;color:#34495e;}
+            .text .post-inner blockquote {padding:0 0 0 20px;margin:0 0 15px;border-left:2px solid #34495e;color:#34495e;}
             .text .post-inner blockquote p {margin:0;padding:0;}
             .pagination a {color:#FFFFFF}
             ol.notes {
@@ -308,7 +308,7 @@ margin:0 0 0 10px;
           moz-opacity:0.5;
           opacity: 0.5;
           filter:alpha(opacity=50);
-          font-size:14px;
+          font-size:12px;
           color : #000000; 
           border-style: dashed;
           padding: 10px;
@@ -460,9 +460,7 @@ Les cartes choropl&egrave;thes, ce sont ces cartes color&eacute;es par zone en f
         
                     <article class="post-perma text">
                         <div class="post-inner">
-                            <h3 class="font"><center>Les horaires de départ au travail</h3>
-                        <!--    <p class="font">Habitez-vous plutôt un quartier d'adeptes des grasses matinées ou de "lève-tôt" ?</p></center>
-                        <!--   <spacer type=horizontal size=20>
+                            <h3 class="font"><center>Les horaires de retour du travail</h3>
                         <!--                               <div class="post-footer">12 mars 2016</div> -->
 
                         
@@ -473,17 +471,18 @@ Les cartes choropl&egrave;thes, ce sont ces cartes color&eacute;es par zone en f
 -->
 <!-- #################### MAP ###################################################### -->
 <!-- http://cartes.passiondataviz.fr/toulouse2014/ -->
-<p><iframe frameborder="0" height="580px" scrolling="no" src="http://matthieuctvt.github.io/horaire_carte.html" width="100%"></iframe></p>
 <!--
-<p><iframe frameborder="0" height="720px" scrolling="no" src="http://matthieuctvt.github.io/horaire_retour_carte.html" width="100%"></iframe></p>
+<p><iframe frameborder="0" height="720px" scrolling="no" src="http://matthieuctvt.github.io/horaire_carte.html" width="100%"></iframe></p>
 -->
+<p><iframe frameborder="0" height="440px" scrolling="no" src="http://matthieuctvt.github.io/horaire_retour_carte.html" width="100%"></iframe></p>
+
 <!-- ################################################################################ -->
 
-<p class="font1">Les quartiers colorés en marron représente les lieux de travail. On retrouve assez nettement les huit premiers arrondissements, dans lesquels les Vélibs sont déposés le matin, lorsque les gens se rendent sur leurs lieu de travail. A l’inverse, les 12 autres arrondissements sont clairement des quartiers dans lesquels les gens prennent leur Vélib le matin pour se rendre à leur travail. </p>
+<p class="font1">Les quartiers colorés en marron représente les lieux de travail. On retrouve assez nettement les huit premiers arrondissements, dans lesquels les utilisateurs empruntent les Vélibs afin de rentrer chez eux. À l’inverse, les 12 autres arrondissements sont clairement des quartiers dans lesquels les gens rentrent chez eux le soir, après le travail.</p>
 
 <!-- ################## TEXTE EN DESSOUS DE LA MAP ################################### -->
 
-<div class="copier font">Pour construire nos cartes, nous avons récupéré les données d’utilisation des Vélibs au cours des mois de février et mars 2016.  Ensuite, nous avons traité les données en essayant de repérer l’horaire de la « chute » du nombre de vélibs le matin, pour chaque station. Une fois cette heure identifiée, nous avons alors pu calculer une heure moyenne de départ pour chaque quartier de Paris. Les quartiers pour lesquels nous n'observons pas de chute du nombre de vélos le matin sont donc considérés comme des quartiers où l'on trouve principalement des lieux de travail.</div>
+<div class="copier font">Pour construire nos cartes, nous avons récupéré les données d’utilisation des Vélibs au cours des mois de février et mars 2016.  Ensuite, nous avons traité les données en essayant de repérer l’horaire de la "montée" du nombre de vélibs le soir, pour chaque station. Une fois cette heure identifiée, nous avons alors pu calculer une heure moyenne de retour pour chaque quartier de Paris. Les quartiers pour lesquels nous n'observons pas une montée du nombre de vélos le soir sont donc considérés comme des quartiers où l'on trouve principalement des lieux de travail.</div>
 
             <!--            <div class="post-footer" style="float:left;">
                             Publié il y a 1 an
@@ -493,7 +492,6 @@ Les cartes choropl&egrave;thes, ce sont ces cartes color&eacute;es par zone en f
     </footer>
                         
                     </article>
-                    
                 
 
                 

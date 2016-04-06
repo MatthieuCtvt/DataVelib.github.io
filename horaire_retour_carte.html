@@ -15,6 +15,7 @@
 <link rel="me" href="https://plus.google.com/101313794478060703082" title="+Pierre Breteau" />
 <link rel="stylesheet" href="http://data.passiondataviz.fr/js/leaflet.css" />
 <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+<link href="jumbotron.css" rel="stylesheet">
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="http://data.passiondataviz.fr/js/leaflet.js"></script>
@@ -28,10 +29,10 @@
 <!-- ################# STYLE ###################################-->
 <style type="text/css">
 html, body { height: 100% }
-#map { min-height: 75%;max-height: 75%; }
+#map { min-height: 100%;max-height: 100%; }
 body {
     margin: 0;
-    font-family: Helvetica, Arial, sans-serif; font-size: 12px;
+    font-family: Dosis; font-size: 12px;
     overflow: hidden;
     letter-spacing:-1px;
 
@@ -84,7 +85,7 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.10);
 }
 .info {
 	padding: 6px 8px;
-	font: 14px/16px Arial, Helvetica, sans-serif;
+	font: 14px/16px Dosis;
 	background: white;
 	background: rgba(255,255,255,0.8);
 	border-radius: 5px;
@@ -96,7 +97,7 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.10);
 	border: 1px solid rgba(0,0,0,0.2);
 }
 .info h4 {
-  font: 16px/18px Helvetica, Arial, sans-serif;
+  font: Dosis;
   font-weight: bold;
 	margin: 0 0 5px;
 	color: #777;
@@ -161,12 +162,12 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 		<i style="background:#00091a"></i> 7h40 - 8h20<br>
 		<i style="background:#660066"></i> Aucun départ visible<br>
 		-->
-		Légende  : <br>
-		<i style="background:#00c0ff"></i> Avant 17h30<br>
-		<i style="background:#0060ff"></i> 17h30 - 18h15<br>
-		<i style="background:#0030ff"></i> 18h15 - 20h<br>
-		<i style="background:#0000ff"></i> Après 20h<br>
-		<i style="background:#daa520"></i> Lieux de travail<br>
+		Retour du travail : <br>
+		<i style="background:#f0a0a0"></i> Avant 17h30<br>
+		<i style="background:#f08080"></i> 17h30 - 18h15<br>
+		<i style="background:#f05050"></i> 18h15 - 20h<br>
+		<i style="background:#f02020"></i> Après 20h<br>
+		<i style="background:#603020"></i> Lieux de travail<br>
 		                 
 	</div>
 					
@@ -200,7 +201,7 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
                               /*'<div style="width:300px;"><span style="font-family:Patua One;font-size:1em;">BUREAU : ' + props.nom + '</span>&nbsp;(' + props.associant + ')<br><span style="color:#08519c;">Jean-Luc Moudenc (UMP)&nbsp;: ' + props.jean_luc_moudenc + '&nbsp;%</span><br><span style="color:#dd3497;">Pierre Cohen (PS)&nbsp;: ' + props.pierre_cohen + '&nbsp%</span></div>'
                                                                                                                           : '<h4>Passez votre souris au dessus des bureaux de vote</h4>');*/
                               
-                              '<div style="width:300px;"><span style="font-family:Patua One;font-size:1em;">Quartier : ' + props.nom + '</span>&nbsp;<br><span style="color:#08519c;">Horaire de départ : ' + props.heureRetour_String + '</div>'
+                              '<div style="width:300px;"><span style="font-family:Dosis;font-size:1em;">Quartier : ' + props.nom + '</span>&nbsp;<br><span style="color:#08519c;">Horaire de retour : ' + props.heureRetour_String + '</div>'
                                                                                                                           : "<h4>Passez votre souris au dessus d'un quartier</h4>");
 	};
 	info.addTo(map);
@@ -217,11 +218,11 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 	//	                 '#660066';
 	//}
 	 function getColor(d) {
-		return d > 20 ? '#0000ff' : 
-		       d > 18.25 ? '#0030ff' : 
-		       d > 17.5  ? '#0060ff' :
-		       d > 15 ? '#00c0ff' :
-		                 '#daa520';
+		return d > 20 ? '#f02020' : 
+		       d > 18.25 ? '#f05050' : 
+		       d > 17.5  ? '#f08080' :
+		       d > 15 ? '#f0a0a0' :
+		                 '#603020';
 	}
 
 	function style(feature) {

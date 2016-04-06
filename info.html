@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -18,20 +17,23 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    
+    <!-- Sticky footer -->
+    <link href="sticky-footer.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
     <style>
-         body{background:url(/cycle5.jpg) no-repeat center fixed;
+         body{
+             background:url(/cycle5.jpg) no-repeat center fixed;
          -webkit-background-size: over; 
          -moz-background-size: over;
          -o-background-size: over;
             backdround-size : over
-
+            opacity: 0.5;
+         }    
     </style>
-
   </head>
-
   <body>
     <!-- ############### BANDE NOIRE EN HAUT #################################### -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -43,82 +45,41 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand font accueil" href="#"> Accueil </center></a>
+          <a class="navbar-brand font accueil" href="index.html"> Accueil </center></a>
         </div>
       </div>
     </nav>
     <!-- ########################################################################## -->
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h3 class ="font2"> Votre vie expliquée par les vélibs</h3>
-        <!-- <p class ="font">Découvrez ce que les vélibs vous apprennent sur la vie de votre quartier !</p> -->
-        <p><a class="btn btn-lg btn-serieux1" href="info.html" role="button">En savoir plus</a></p>
-      </div>
-    </div>
-<!--
-    <div class="container">
-       Example row of columns 
-      <div class="row">
-         <div class="col-md-4">
-          <h2>"L'effet périf"</h2>
-          <p>Comparer les stations !  </p>
-          <p><a class="btn btn-default" href="perif.html" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Les quartiers qui se lèvent tôt !</h2>
-          <p>A quelle heure la plupart de vos voisins partent-ils au boulot ? Finissent-ils tard ? Venez décrouvrir ce que les données velib révèlent ! </p>
-          <p><a class="btn btn-default" href="horaire.html" role="button">C'est parti ! &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Des quartiers favorisés ?</h2>
-          <p>A-t-on des quartiers favorisés ?</p>
-          <p><a class="btn btn-default" href="favorise.html" role="button">View details &raquo;</a></p>
-        </div>
-      </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; 2015 Company, Inc.</p>
-      </footer>
-    </div>  
--->
     <!-- /container -->
-
 <!-- Wrap the rest of the page in another container to center all the content. -->
-
-<div class="container marketing">
-
+<div class="container marketing info">
     <!-- Three columns of text below the carousel -->
     <div class="row">
         <div class="col-lg-4 text-accueil">
             <center><img src="/reveil3.png" height="120" alt="Generic placeholder image"></center>
             <h3 class="font">Les quartiers qui se lèvent tôt !</h3>
-            <p class="font">À quelle heure la plupart de vos voisins partent-ils au boulot ? Finissent-ils tard ? Venez décrouvrir ce que les Vélibs révèlent ! </p>
+            <p class="font">On récupère les données d'une «journée-type» d’utilisation des vélibs : date de la journée sélectionnée.  Ensuite, on traite les données en essayant de repérer l’horaire de la "chute" du nombre de vélibs le matin pour chaque station. Une fois cette heure identifiée, on peut alors calculer une heure moyenne de départ pour chaque quartier de Paris. Les quartiers pour lesquels nous n'observons pas une chute du nombre de vélos le matin sont donc considérés comme des quartiers où l'on trouve principalement des lieux de travail.</p>
             <center><p><a class="btn btn-serieux1" href="horaire.html" role="button">C'est parti !</a></p></center>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4 text-accueil">
             <center><img src="/biere.png" height="120" alt="Generic placeholder image"></center>
             <h3 class="font">Qui rentre tôt du boulot ?</h3>
-            <p class="font">Découvrez où vivent les parisiens qui rentrent le plus tôt du travail !</p>
-            <center><p><a class="btn btn-serieux1" href="horaireRetour.html" role="button">C'est parti !</a></p></center>
+            <p class="font">On récupère les données d'une «journée-type» d’utilisation des vélibs : date de la journée sélectionnée.  Ensuite, on traite les données en essayant de repérer l’horaire de la "montée" du nombre de vélibs le soir pour chaque station. Une fois cette heure identifiée, on peut alors calculer une heure moyenne de retour pour chaque quartier de Paris. Les quartiers pour lesquels nous n'observons pas une montée du nombre de vélos le soir sont donc considérés comme des quartiers où l'on trouve principalement des lieux de travail.</p>
+            <center><p><a class="btn btn-serieux1" href="horaire.html" role="button">C'est parti !</a></p></center>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4 text-accueil">
             <center><img  src="/hache.png" height="120" alt="Generic placeholder image"></center>
             <h3 class="font">Qui casse les Velibs ?</h3>
-            <p class="font">Habitez-vous dans un quartier où les velibs sont souvent cassés ? </p>
+            <p class="font">On récupère les données d'une «semaine-type» d’utilisation des vélibs : date de la journée sélectionnée.  Ensuite, on traite les données en calculant la moyenne du nombre de vélibs dégradés pour chaque station. Une fois cette heure identifiée, on peut alors calculer un taux moyen de dégradation pour chaque quartier de Paris.</p>
             <center><p><a class="btn btn-serieux1" href="degradation.html" role="button">C'est parti !</a></p></center>
         </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
-
-
     <!-- FOOTER -->
-    <footer class="text-accueil">
+    <footer class="footer">
+        <div class="container">
         <p>&copy; 2016 Data-Velib</p>
+        </div>
     </footer>
-
 </div><!-- /.container -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
