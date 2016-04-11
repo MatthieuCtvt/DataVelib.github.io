@@ -59,7 +59,7 @@ footer{
     color: white; /* Le texte sera affiché en blanc */
     margin-top: 2cm;
     margin-left: 2cm;
-    background : transparent;
+    background:url(/cycle5.jpg);
     width:200px;
 }
 
