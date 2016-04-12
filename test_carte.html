@@ -41,12 +41,14 @@ body {
 	border-radius: 4px;
 	border: 1px solid rgba(0,0,0,0.2);
 }
+
 .info h4 {
   font: 16px/18px Dosis;
   font-weight: bold;
 	margin: 0 0 5px;
 	color: #777;
 }
+
 .legend {
 	text-align: left;
 	line-height: 18px;
@@ -67,15 +69,14 @@ body {
 	margin-right: 8px;
 	opacity: 0.9;
 }
-.leaflet-tile-pane {position:relative;z-index:4;}
-.leaflet-overlay-pane {position:relative;z-index:3;}
-.leaflet-marker-pane {z-index: 6;}
-path.leaflet-clickable {opacity:1;}
+
 path { stroke-linejoin; round; stroke-linecap: round;}
 path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:none}
 </style>
 <!-- ###########################################################-->
-</head><body>
+</head>
+
+<body>
 
 <!-- ################# LEGEND ##################################-->	
 <div id="map">	  
@@ -95,9 +96,9 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 <!-- ################################################################################## -->
 
 <!-- ########################  REGLAGE DE LA MAP ##################################### -->
-<!-- Ex : centre init / zoom min et max / couleur en fonction de la valeur / route et batiment -->
+
 <script>
-// On monte la carte, et on centre sur Paris
+// On centre sur Paris
 	var map = L.map('map', { minZoom: 12, maxZoom: 16} );
 	
 	map.setView([48.857807, 2.333033], 12);
@@ -113,10 +114,6 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 	};
 	info.update = function (props) {
      this._div.innerHTML =   (props ?
-     
-                              /*'<div style="width:300px;"><span style="font-family:Patua One;font-size:1em;">BUREAU : ' + props.nom + '</span>&nbsp;(' + props.associant + ')<br><span style="color:#08519c;">Jean-Luc Moudenc (UMP)&nbsp;: ' + props.jean_luc_moudenc + '&nbsp;%</span><br><span style="color:#dd3497;">Pierre Cohen (PS)&nbsp;: ' + props.pierre_cohen + '&nbsp%</span></div>'
-                                                                                                                          : '<h4>Passez votre souris au dessus des bureaux de vote</h4>');*/
-                              
                               '<div style="width:300px;"><span style="font-family:Dosis;font-size:1em;">Quartier : ' + props.nom + '</span>&nbsp;<br><span style="color:#08519c;">Taux de dégradation : ' + props.tauxVelibCasse_string + '</div>'
                                                                                                                           : "<h4>Passez votre souris au dessus d'un quartier</h4>");
 	};
@@ -150,10 +147,6 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 			dashArray: '',
 			fillOpacity: 1
 		});
-/**		if (!L.Browser.ie && !L.Browser.opera) {
-			layer.bringToFront();
-		}
-**/
 		info.update(layer.feature.properties);
 	}
 	var geojson;
