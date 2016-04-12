@@ -98,9 +98,9 @@ var map = L.map('map', { minZoom: 12, maxZoom: 16} );
 var map = L.map('map').setView([48.857807, 2.333033], 12);
 
 
-//	if (L.Browser.touch) {
-//		L.control.touchHover().addTo(map);
-//	}
+	if (L.Browser.touch) {
+		L.control.touchHover().addTo(map);
+	}
 	
 	
 	// On créé le cadre en haut à gauche avec l'exemple des tutoriels Leafletjs
