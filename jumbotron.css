@@ -55,11 +55,10 @@ footer{
          
 .jumbotron {
     margin-bottom: 0px;
-    height: 320px;
+    height: 180px;
     color: white; /* Le texte sera affiché en blanc */
     margin-top: 2cm;
     margin-left: 2cm;
-    background:url(/cycle5.jpg);
     width:200px;
 }
 
