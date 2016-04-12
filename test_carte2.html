@@ -78,13 +78,13 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 					
 	<div class="info legend leaflet-control" style="position:absolute; bottom:10px; right:10px; display:block; z-index:1000000;width:auto;">
 
-		Légende  : Taux de déterioration<br>
-		<i style="background:#f0c0c0"></i> Pas de déterioration<br>
-		<i style="background:#f0a0a0"></i> 1% - 3% <br>
-		<i style="background:#f08080"></i> 3% - 10%<br>
-		<i style="background:#f05050"></i> 10% - 20%<br>
-		<i style="background:#f02020"></i> Plus de 20%<br>
-		                 
+		Départ au travail : <br>
+		<i style="background:#f02020"></i> Après 9h30<br>
+		<i style="background:#f05050"></i> 9h00 - 9h30<br>
+		<i style="background:#f08080"></i> 8h45 - 9h00<br>
+		<i style="background:#f0a0a0"></i> 8h30 - 8h45<br>
+		<i style="background:#f0c0c0"></i> Avant 8h30<br>
+		<i style="background:#603020"></i> Lieux de travail<br>                      
 	</div>
 					
 </div>
@@ -114,8 +114,8 @@ info.onAdd = function (map) {
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
     this._div.innerHTML = (props ?
-        '<div style="width:300px;"><span style="font-family:Dosis;font-size:1em;">Quartier : ' + props.nom + '</span>&nbsp;<br><span style="color:#08519c;">Taux de dégradation : ' + props.tauxVelibCasse_string + '</div>'
-        : "<h4>Passez votre souris au dessus d'un quartier</h4>");
+        '<div style="width:300px;"><span style="font-family:Dosis;font-size:1em;">Quartier : ' + props.nom + '</span>&nbsp;<br><span style="color:#08519c;">Horaire de départ : ' + props.heureDepart_string + '</div>'
+         	: "<h4>Passez votre souris au dessus d'un quartier</h4>");
 };
 info.addTo(map);
 	
@@ -123,16 +123,13 @@ info.addTo(map);
 	
 	
 	function getColor(d) {
-    return d > 1    ? '#ff0000' :
-           d > 0.2  ? '#f02020' :
-           d > 0.1  ? '#f05050' :
-           d > 0.03 ? '#f08080' :
-           d > 0.01 ? '#f0a0a0' :
-           d > 0    ? '#f0c0c0' :
-           d > -1   ? '#f0c0c0' :
-                      '#fff0f0';
+    return d > 9.50 ? '#f02020' :
+           d > 8.99 ? '#f05050' :
+           d > 8.75 ? '#f08080' :
+           d > 8.50 ? '#f0a0a0' :
+           d > 6    ? '#f0c0c0' :
+                      '#603020';
 }
-
 
 
 	function style(feature) {
