@@ -26,11 +26,7 @@ body{background:url(/gris.jpg) no-repeat center fixed;
 -o-background-size: over;
 backdround-size : over
 }
-/*            header {margin-bottom:10px;}
-            #infscr-loading {position:fixed;bottom:20px;left:50%;width:52px;padding:10px;text-align:center;border-radius:4px;margin-left:-36px;}
-            #infscr-loading em {color:#000;opacity:.5;}
-            #infscr-loading img {opacity:.5;}
-            header .header-inner, */ 
+
             #posts {
                 /* 320,640,960,1280,1600,1920,2240,2560*/
                 width:960px;
@@ -57,8 +53,8 @@ backdround-size : over
     
 <body>
 
-     <!-- ################################################################### -->
-     <!-- ############### BANDE NOIRE EN HAUT #################################### -->       
+
+     <!-- ############### Barre de navigation #################### -->       
         
 
 	
@@ -70,79 +66,45 @@ backdround-size : over
 	</div>
 	</div>
 </nav>
-<!-- ######
-<header>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand font accueil" href="index.html"> Accueil </center></a>
-          <a class="navbar-brand font accueil" href="info.html">En savoir plus </center></a>
-        </div>
-      </div>
-    </nav>
-</header>
-######### -->
-    <!-- ########################################################################## -->
 
-    <!-- ############### TEXTE AU DESSUS DE LA CARTE #################################### -->
+     <!-- ################################################################### -->
+     <!-- ####################### Titre de la page ########################## -->
        <center>
-        <div id="posts">
-        
-                    <article>
-                        <div>
-                            <h3 class="font"><center>Les taux de dégradation par quartier</center></h3>
-                                <!--                        <div class="post-footer">12 mars 2016</div> -->
+        <div class="corps">
+                <h3 class="font"><center>Les taux de dégradation par quartier</center></h3>
 
-			<!--
-                        <p>Les cartes choropl&egrave;thes, ce sont ces cartes color&eacute;es par zone en fonction de l'intensit&eacute;. C'est une solution tr&egrave;s commode pour faire ressortir les prix de l'immobilier, les r&eacute;sultats &eacute;lectoraux, les revenus par habitant ou un indice quelconque.</p>
-<p>Dans cet exemple, bas&eacute; sur <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fleafletjs.com%2Fexamples.html&amp;t=YzYwYWVjOGIzMGJkMTg3ZTUwZmIzM2Q0N2Q3NzAxM2Y2YTBiNmQzMixJaU10MlFpTg%3D%3D" target="_blank">les tutoriels de Leaflet</a>&nbsp;et rapidement mis en forme, ce sont les r&eacute;sultats de l'&eacute;lection municipale qui sont cartographi&eacute;s bureau de vote par bureau de vote dans la pr&eacute;fecture de la Haute-Garonne.</p>
-<p>En l'occurrence, nous repr&eacute;sentons ici le pourcentage de votes pour les deux candidats &agrave; la mairie de Toulouse en 2014, Jean-Luc Moudence (UMP) et Pierre Cohen (PS). Avec l'aide des donn&eacute;es de <a href="http://t.umblr.com/redirect?z=http%3A%2F%2Fdata.grandtoulouse.fr%2Fweb%2Fguest%2Fles-donnees%2F-%2Fopendata%2Fcard%2F14401-bureaux-de-vote-decoupage&amp;t=YWM5YjY3Y2ZmYWMwMjMyOTI0MWFmMWFlNzVlYjJjOTAzNzU4MmE2ZSxJaU10MlFpTg%3D%3D" target="_blank">la ville de Toulouse</a> sur le d&eacute;coupage de la ville (publi&eacute;es tout r&eacute;cemment) les r&eacute;sultats bureau par bureau La carte permet de figer les r&eacute;flexes &eacute;lectoraux des Toulousains en mars 2014, au quartier pr&ecirc;t.</p>
--->
-<!-- #################### MAP ###################################################### -->
-<!-- http://cartes.passiondataviz.fr/toulouse2014/ -->
+	<!-- #################### La carte ##################### -->
+
 <p><iframe frameborder="0" height="440px" scrolling="no" src="http://matthieuctvt.github.io/degradation_carte.html" width="100%"></iframe></p>
 
-<!-- ################################################################################ -->
+	<!-- ############################################ -->
 
-<p class="font1">Le taux de Vélibs dégradés ou inutilisables peut considérablement varier d’un quartier à un autre. On observe que <b>la rive gauche semble globalement épargnée</b> par les dégradations et les stations inutilisables : seuls les quartiers École militaire et Violet-Commerce affichent des taux de dégradation supérieurs à 3%.</p>
-<p class="font1"><b>Rive droite, le constat est tout autre, et les inégalités sont grandes.</b> Alors que le <b>16ème arrondissement a un taux de dégradation de 0%</b>, le nord-est de Paris est grandement défavorisé ! Tous les quartiers des <b>11ème et 20ème arrondissements ont un taux de dégradation positif</b>, avec une pointe à 9% dans le quartier Gambetta.</p>
-<p class="font1">Mais <b>les pires taux de dégradation sont à noter dans les quartiers du nord des 18ème et 19ème arrondissements</b>. Alors que le quartier Moscowa - Porte Montmartre - Porte de Clignancourt affiche un taux de 11%, on monte à 13% à Danube, et <b>on atteint même des sommets avec les 22% du quartier Pont de Flandre</b> !</p>
-<p class="lastp">Alors, mauvaise utilisation des usagers des Vélibs, ou entretien préférentiel de certains quartiers ? Faites vous votre opinion en parcourant notre carte !</p>
-<!-- ################## TEXTE EN DESSOUS DE LA MAP ################################### -->
+	<!-- ################# Les interprétations de la carte ################# -->
+
+<p class="font_explain">Le taux de Vélibs dégradés ou inutilisables peut considérablement varier d’un quartier à un autre. On observe que <b>la rive gauche semble globalement épargnée</b> par les dégradations et les stations inutilisables : seuls les quartiers École militaire et Violet-Commerce affichent des taux de dégradation supérieurs à 3%.</p>
+<p class="font_explain"><b>Rive droite, le constat est tout autre, et les inégalités sont grandes.</b> Alors que le <b>16ème arrondissement a un taux de dégradation de 0%</b>, le nord-est de Paris est grandement défavorisé ! Tous les quartiers des <b>11ème et 20ème arrondissements ont un taux de dégradation positif</b>, avec une pointe à 9% dans le quartier Gambetta.</p>
+<p class="font_explain">Mais <b>les pires taux de dégradation sont à noter dans les quartiers du nord des 18ème et 19ème arrondissements</b>. Alors que le quartier Moscowa - Porte Montmartre - Porte de Clignancourt affiche un taux de 11%, on monte à 13% à Danube, et <b>on atteint même des sommets avec les 22% du quartier Pont de Flandre</b> !</p>
+<p class="font_explain">Alors, mauvaise utilisation des usagers des Vélibs, ou entretien préférentiel de certains quartiers ? Faites vous votre opinion en parcourant notre carte !</p>
+	
+	<!-- ############################################ -->
 
 <div class="copier font">
 <p>Pour construire nos cartes, nous avons récupéré les données d’utilisation des Vélibs au cours des mois de février et mars 2016.  Ensuite, nous avons calculé un taux de dégradation ou de bornes inutilisables pour chaque quartier de Paris sur cette période. Nous avons ensuite représenté ces taux de dégradation sur la carte.</p>
-<p>Le fond de la carte provient, à l'origine, de l'excellent blog <a href="http://www.passiondataviz.fr/">Passion Dataviz</a>. Nous remercions vivement son auteur, Pierre Breteau.</p>
 </div>
+
 </center>
-            <!--            <div class="post-footer" style="float:left;">
-                            Publié il y a 1 an
-    <!-- FOOTER -->
+
+
+    <!-- ############ Le footer ################## -->
     <footer class="text-accueil">
         <p class="font">&copy; 2016 Data-Velib - <a href="mailto:datavelib@gmail.com">datavelib@gmail.com</a></p>
     </footer>
-                        
-                  </article>
-
-                
-
-                
-
-                
-
-                
-                
-                
-
-                
-
-                
-                
+                       
+    <!-- ########################################## -->
             
         </div>
-       		    </article>
-        </div> 
-    <!-- ################################################################################ -->
+
+    <!-- ################################################################## -->
 
 </body>
 </html>
