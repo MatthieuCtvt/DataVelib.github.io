@@ -1,1 +1,82 @@
 
+<!DOCTYPE html>
+<html>
+	
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href="datavelib.css" rel="stylesheet"> 
+
+<meta charset="utf-8">
+
+<title>Qui rentre tôt ?</title>
+        
+<!-- ############## Sript pour Analytics  ##############  -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-76105401-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- ############## Style pour l'arrière-plan  ##############  -->       
+<style>
+body{background:url(/gris.jpg) no-repeat center fixed;
+-webkit-background-size: over; 
+-moz-background-size: over;
+-o-background-size: over;
+backdround-size : over
+}
+
+</style>
+        
+    <!-- ########################################################################## -->
+    
+<body>
+     <!-- ############### Barre de navigation #################### -->       
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+	<div class="navbar-header">
+		<a class="navbar-brand font" href="/index.html">Accueil</a>
+		<a class="navbar-brand font" href="/info.html">En savoir plus</a>
+	</div>
+	</div>
+</nav>
+	<!-- ################################################################### -->
+     
+	<!-- ####################### Titre de la page ########################## -->
+        <center>
+        <div class="corps">
+        <h3 class="font"><center>Le retour du travail</center></h3>
+	<!-- ################################################################### -->
+     
+	<!-- #################### La carte ##################### -->
+<p><iframe frameborder="0" height="440px" scrolling="no" src="http://matthieuctvt.github.io/test_carte_hr.html" width="100%"></iframe></p>
+	<!-- ############################################ -->
+
+	<!-- ################# Les interprétations de la carte ################# -->
+<p class="font_explain">Globalement, les 8 premiers arrondissements semblent se détacher comme principaux lieux de travail de la capitale : dans ces quartiers, les Vélibs sont retirés le soir. À l’inverse, les 12 autres arrondissements sont clairement des quartiers dans lesquels les gens rentrent chez eux le soir, après le travail. Comme pour la carte des départs, alors que <b>le centre de Paris est principalement réservé au travail</b>, les <b>arrondissements périphériques accueillent les lieux de vie</b> des parisiens.</p>
+<p class="font_explain">On note une <b>plus grande homogénéité au sein des horaires de retour du travail</b>, en comparaison des horaires de départ. En effet, la plupart des quartiers indiquent un horaire de retour moyen des utilisateurs de Vélibs compris <b>entre 17h30 et 18h15</b>. De plus, on note que les habitants du <b>11ème arrondissement, ainsi que ceux du nord des 17ème et 18ème arrondissements rentrent plus tard du travail que la moyenne</b>, entre 18h15 et 20h.</p>
+	<!-- ############################################ -->
+
+	<!-- ################# Explications pour la construction ################# -->
+<div class="construction">
+<p>Pour construire nos cartes, nous avons récupéré les données d’utilisation des Vélibs au cours des mois de février et mars 2016.  Ensuite, nous avons traité les données en essayant de repérer l’horaire de l'augmentation du nombre de vélibs le soir, pour chaque station. Une fois cette heure identifiée, nous avons alors pu calculer une heure moyenne de retour pour chaque quartier de Paris. Les quartiers pour lesquels nous n'observons pas une montée du nombre de vélos le soir sont donc considérés comme des quartiers où l'on trouve principalement les lieux de travail des usagers des Vélibs.</p>
+</div>
+	<!-- ############################################ -->
+</center>
+
+    <!-- ############ Le footer ################## -->
+    <footer class="text-accueil">
+        <p class="font">&copy; 2016 Data-Velib - <a href="mailto:datavelib@gmail.com">datavelib@gmail.com</a></p>
+    </footer>
+    <!-- ########################################## -->
+            
+        </div>
+
+    <!-- ################################################################## -->
+
+</body>
+</html>
+
