@@ -10,7 +10,7 @@
 <script type="text/javascript" src="http://matthieuctvt.github.io/js/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="http://matthieuctvt.github.io/js/Control.TouchHover.js"></script>
 <script type="text/javascript" src="http://matthieuctvt.github.io/js/TileLayer.d3_geoJSON.js"></script>
-<script type="text/javascript" src="http://matthieuctvt.github.io/data_departBoulot.json"></script> 
+<script type="text/javascript" src="http://matthieuctvt.github.io/data_tot.json"></script> 
 
 <!-- ################# STYLE ###################################-->
 <style type="text/css">
@@ -65,13 +65,12 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 					
 	<div class="info legend leaflet-control" style="position:absolute; bottom:10px; right:10px; display:block; z-index:1000000;width:auto;">
 
-		Départ au travail : <br>
-		<i style="background:#f02020"></i> Après 9h30<br>
-		<i style="background:#f05050"></i> 9h00 - 9h30<br>
-		<i style="background:#f08080"></i> 8h45 - 9h00<br>
-		<i style="background:#f0a0a0"></i> 8h30 - 8h45<br>
-		<i style="background:#f0c0c0"></i> Avant 8h30<br>
-		<i style="background:#603020"></i> Lieux de travail<br>   
+		Retour du travail : <br>
+		<i style="background:#f0a0a0"></i> Avant 17h30<br>
+		<i style="background:#f08080"></i> 17h30 - 18h15<br>
+		<i style="background:#f05050"></i> 18h15 - 20h<br>
+		<i style="background:#f02020"></i> Après 20h<br>
+		<i style="background:#603020"></i> Lieux de travail<br>
 		                 
 	</div>
 					
@@ -97,17 +96,16 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 	};
 	info.update = function (props) {
      this._div.innerHTML =   (props ?
-                              '<div style="width:300px;"><span style="font-family:Dosis;font-size:1em;">Quartier : ' + props.nom + '</span>&nbsp;<br><span style="color:#08519c;">Départ au travail : ' + props.heureDepart_string + '</div>'
+                              '<div style="width:300px;"><span style="font-family:Dosis;font-size:1em;">Quartier : ' + props.nom + '</span>&nbsp;<br><span style="color:#08519c;">Horaire de retour : ' + props.heureRetour_String + '</div>'
                                                                                                                           : "<h4>Passez votre souris au dessus d'un quartier</h4>");
 	};
 	info.addTo(map);
 // Les couleurs
 	 function getColor(d) {
-		return d > 9.50  ? '#f02020' :
-		       d > 8.99  ? '#f05050' :
-		       d> 8.75   ? '#f08080' : 
-		       d > 8.50  ? '#f0a0a0' :
-		       d > 6     ? '#f0c0c0' :
+		return d > 20    ? '#f02020' : 
+		       d > 18.25 ? '#f05050' : 
+		       d > 17.5  ? '#f08080' :
+		       d > 15    ? '#f0a0a0' :
 		                   '#603020';
 	}
 	function style(feature) {
@@ -117,7 +115,7 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 			color: 'white',
 			dashArray: '3',
 			fillOpacity: 1,
-			fillColor: getColor(feature.properties.heureDepart)
+			fillColor: getColor(feature.properties.heureRetour)
 		};
 	}
 	function highlightFeature(e) {
