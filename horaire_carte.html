@@ -3,14 +3,14 @@
 <meta charset="utf-8">
 
 <link rel="stylesheet" href="http://matthieuctvt.github.io/js/leaflet.css" />
-<link href="jumbotron.css" rel="stylesheet">
+<link href="datavelib.css" rel="stylesheet">
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="http://matthieuctvt.github.io/js/leaflet.js"></script>
 <script type="text/javascript" src="http://matthieuctvt.github.io/js/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="http://matthieuctvt.github.io/js/Control.TouchHover.js"></script>
 <script type="text/javascript" src="http://matthieuctvt.github.io/js/TileLayer.d3_geoJSON.js"></script>
-<script type="text/javascript" src="http://matthieuctvt.github.io/degradation_map.json"></script> 
+<script type="text/javascript" src="http://matthieuctvt.github.io/data_departBoulot.json"></script> 
 
 <!-- ################# STYLE ###################################-->
 <style type="text/css">
@@ -60,13 +60,14 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 <div id="map">	  
 					
 	<div class="info legend leaflet-control" style="position:absolute; bottom:10px; right:10px; display:block; z-index:1000000;width:auto;">
-
-		Légende  : Taux de déterioration<br>
-		<i style="background:#f0c0c0"></i> Pas de déterioration<br>
-		<i style="background:#f0a0a0"></i> 1% - 3% <br>
-		<i style="background:#f08080"></i> 3% - 10%<br>
-		<i style="background:#f05050"></i> 10% - 20%<br>
-		<i style="background:#f02020"></i> Plus de 20%<br>
+		
+		Départ au travail : <br>
+		<i style="background:#f02020"></i> Après 9h30<br>
+		<i style="background:#f05050"></i> 9h00 - 9h30<br>
+		<i style="background:#f08080"></i> 8h45 - 9h00<br>
+		<i style="background:#f0a0a0"></i> 8h30 - 8h45<br>
+		<i style="background:#f0c0c0"></i> Avant 8h30<br>
+		<i style="background:#603020"></i> Lieux de travail<br>   
 		                 
 	</div>
 					
@@ -92,20 +93,18 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 	};
 	info.update = function (props) {
      this._div.innerHTML =   (props ?
-                              '<div style="width:300px;"><span style="font-family:Dosis;font-size:1em;">Quartier : ' + props.nom + '</span>&nbsp;<br><span style="color:#08519c;">Taux de dégradation : ' + props.tauxVelibCasse_string + '</div>'
+                              '<div style="width:300px;"><span style="font-family:Dosis;font-size:1em;">Quartier : ' + props.nom + '</span>&nbsp;<br><span style="color:#08519c;">Départ au travail : ' + props.heureDepart_string + '</div>'
                                                                                                                           : "<h4>Passez votre souris au dessus d'un quartier</h4>");
 	};
 	info.addTo(map);
 // Les couleurs
 	 function getColor(d) {
-		return d > 1  ? '#ff0000' :
-	 	       d > 0.2  ? '#f02020' :
-		       d > 0.1  ? '#f05050' :
-		       d > 0.03  ? '#f08080' :
-		       d > 0.01 ? '#f0a0a0' : 
-		       d > 0 ? '#f0c0c0' : 
-		       d > -1  ? '#f0c0c0' :
-		       '#fff0f0';
+		return d > 9.50  ? '#f02020' :
+		       d > 8.99  ? '#f05050' :
+		       d> 8.75   ? '#f08080' : 
+		       d > 8.50  ? '#f0a0a0' :
+		       d > 6     ? '#f0c0c0' :
+		                   '#603020';
 	}
 	function style(feature) {
 		return {
@@ -114,7 +113,7 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 			color: 'white',
 			dashArray: '3',
 			fillOpacity: 1,
-			fillColor: getColor(feature.properties.tauxVelibCasses)
+			fillColor: getColor(feature.properties.heureDepart)
 		};
 	}
 	function highlightFeature(e) {

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	
@@ -7,7 +8,7 @@
 
 <meta charset="utf-8">
 
-<title>Les dégradations</title>
+<title>Les Vélibs disponibles</title>
         
 <!-- ############## Sript pour Analytics  ##############  -->
 <script>
@@ -27,6 +28,7 @@ body{background:url(/gris.jpg) no-repeat center fixed;
 -o-background-size: over;
 backdround-size : over
 }
+
 </style>
         
     <!-- ########################################################################## -->
@@ -46,24 +48,23 @@ backdround-size : over
 	<!-- ####################### Titre de la page ########################## -->
         <center>
         <div class="corps">
-        <h3 class="font"><center>Les taux de dégradation par quartier</center></h3>
+        <h3 class="font"><center>À quelle heure chercher un Vélib ?</center></h3>
 	<!-- ################################################################### -->
      
 	<!-- #################### La carte ##################### -->
-<p><iframe frameborder="0" height="440px" scrolling="no" src="http://matthieuctvt.github.io/degradation_carte.html" width="100%"></iframe></p>
+<p><iframe class='highcharts-iframe' src='//cloud.highcharts.com/embed/edawuw' style='border: 0; width: 100%; height: 500px'></iframe></p>
 	<!-- ############################################ -->
 
 	<!-- ################# Les interprétations de la carte ################# -->
-<p class="font_explain">Le taux de Vélibs dégradés ou inutilisables peut considérablement varier d’un quartier à un autre. On observe que <b>la rive gauche semble globalement épargnée</b> par les dégradations et les stations inutilisables : seuls les quartiers École militaire et Violet-Commerce affichent des taux de dégradation supérieurs à 3%.</p>
-<p class="font_explain"><b>Rive droite, le constat est tout autre, et les inégalités sont grandes.</b> Alors que le <b>16ème arrondissement a un taux de dégradation de 0%</b>, le nord-est de Paris est grandement défavorisé ! Tous les quartiers des <b>11ème et 20ème arrondissements ont un taux de dégradation positif</b>, avec une pointe à 9% dans le quartier Gambetta.</p>
-<p class="font_explain">Mais <b>les pires taux de dégradation sont à noter dans les quartiers du nord des 18ème et 19ème arrondissements</b>. Alors que le quartier Moscowa - Porte Montmartre - Porte de Clignancourt affiche un taux de 11%, on monte à 13% à Danube, et <b>on atteint même des sommets avec les 22% du quartier Pont de Flandre</b> !</p>
-<p class="font_explain">Alors, mauvaise utilisation des usagers des Vélibs, ou entretien préférentiel de certains quartiers ? Faites vous votre opinion en parcourant notre carte !</p>
+<p class="font_explain">Ce sont durant les heures de départ au travail qu'il y a le moins de Vélibs disponibles au cours de la journée. On remarque que le <b>pic est très marqué autour de 8h50</b>. L’autre moment critique de la journée pour emprunter un Vélib correspond aux horaires de retour du travail. Toutefois, on note que <b>la courbe est plus étalée que le matin, avec un nombre minimal de Vélibs disponibles stable entre 18h30 et 19h30</b>.</p>
+<p class="font_explain">Le week-end, on remarque que les variations au cours de la journée sont moins importantes. Notons tout de même ce qui ressemble à un <b>« effet dernier métro » vers 2h du matin</b>, le nombre de Vélib baisse, puis remonte après l’heure du dernier métro.</p>
 	<!-- ############################################ -->
 
 	<!-- ################# Explications pour la construction ################# -->
 <div class="construction">
-<p>Pour construire nos cartes, nous avons récupéré les données d’utilisation des Vélibs au cours des mois de février et mars 2016.  Ensuite, nous avons calculé un taux de dégradation ou de bornes inutilisables pour chaque quartier de Paris sur cette période. Nous avons ensuite représenté ces taux de dégradation sur la carte.</p>
+<p>Pour construire nos cartes, nous avons récupéré les données d’utilisation des Vélibs au cours des mois de février et mars 2016.  Nous avons ensuite fait la moyenne du nombre de Vélibs pour chaque moment de la journée, en différenciant la semaine du week-end.</p>
 </div>
+
 	<!-- ############################################ -->
 </center>
 
@@ -79,3 +80,4 @@ backdround-size : over
 
 </body>
 </html>
+

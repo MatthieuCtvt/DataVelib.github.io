@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="fr"><head>
 <meta charset="utf-8">
@@ -22,6 +24,7 @@ body {
     font-size: 12px;
     overflow: hidden;
 }
+
 .info {
     padding: 6px 8px;
     font: 14px/16px Dosis;
@@ -29,11 +32,13 @@ body {
     background: rgba(255,255,255,0.8);
     border-radius: 5px;
 }
+
 .info h4 {
     font: 16px/18px Dosis;
     margin: 0 0 5px;
     color: #777;
 }
+
 .legend {
     text-align: left;
     line-height: 18px;
@@ -49,6 +54,7 @@ body {
     margin-right: 8px;
     opacity: 1;
 }
+
 path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:none} 
 </style>
 <!-- ###########################################################-->
@@ -162,6 +168,7 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 		div.innerHTML = labels.join('<br>');
 		return div;
 	};
+
 // Pour régler la taille des routes
 var roadSizes = {
   "highway": "3px",
@@ -174,6 +181,8 @@ var routes = new L.TileLayer.d3_geoJSON("http://vector.mapzen.com/osm/roads/{z}/
   class: "road",
   style: function(d) { return "stroke-width: " + roadSizes[d.properties.kind]; }
 }).addTo(map);
+
+
 </script>
 <!-- ################################################################################## -->
 <!-- ################################################################################## -->

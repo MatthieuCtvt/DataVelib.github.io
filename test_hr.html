@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	
@@ -7,7 +8,7 @@
 
 <meta charset="utf-8">
 
-<title>Les dégradations</title>
+<title>Qui rentre tôt ?</title>
         
 <!-- ############## Sript pour Analytics  ##############  -->
 <script>
@@ -27,6 +28,7 @@ body{background:url(/gris.jpg) no-repeat center fixed;
 -o-background-size: over;
 backdround-size : over
 }
+
 </style>
         
     <!-- ########################################################################## -->
@@ -46,23 +48,21 @@ backdround-size : over
 	<!-- ####################### Titre de la page ########################## -->
         <center>
         <div class="corps">
-        <h3 class="font"><center>Les taux de dégradation par quartier</center></h3>
+        <h3 class="font"><center>Le retour du travail</center></h3>
 	<!-- ################################################################### -->
      
 	<!-- #################### La carte ##################### -->
-<p><iframe frameborder="0" height="440px" scrolling="no" src="http://matthieuctvt.github.io/degradation_carte.html" width="100%"></iframe></p>
+<p><iframe frameborder="0" height="440px" scrolling="no" src="http://matthieuctvt.github.io/test_carte_hr.html" width="100%"></iframe></p>
 	<!-- ############################################ -->
 
 	<!-- ################# Les interprétations de la carte ################# -->
-<p class="font_explain">Le taux de Vélibs dégradés ou inutilisables peut considérablement varier d’un quartier à un autre. On observe que <b>la rive gauche semble globalement épargnée</b> par les dégradations et les stations inutilisables : seuls les quartiers École militaire et Violet-Commerce affichent des taux de dégradation supérieurs à 3%.</p>
-<p class="font_explain"><b>Rive droite, le constat est tout autre, et les inégalités sont grandes.</b> Alors que le <b>16ème arrondissement a un taux de dégradation de 0%</b>, le nord-est de Paris est grandement défavorisé ! Tous les quartiers des <b>11ème et 20ème arrondissements ont un taux de dégradation positif</b>, avec une pointe à 9% dans le quartier Gambetta.</p>
-<p class="font_explain">Mais <b>les pires taux de dégradation sont à noter dans les quartiers du nord des 18ème et 19ème arrondissements</b>. Alors que le quartier Moscowa - Porte Montmartre - Porte de Clignancourt affiche un taux de 11%, on monte à 13% à Danube, et <b>on atteint même des sommets avec les 22% du quartier Pont de Flandre</b> !</p>
-<p class="font_explain">Alors, mauvaise utilisation des usagers des Vélibs, ou entretien préférentiel de certains quartiers ? Faites vous votre opinion en parcourant notre carte !</p>
+<p class="font_explain">Globalement, les 8 premiers arrondissements semblent se détacher comme principaux lieux de travail de la capitale : dans ces quartiers, les Vélibs sont retirés le soir. À l’inverse, les 12 autres arrondissements sont clairement des quartiers dans lesquels les gens rentrent chez eux le soir, après le travail. Comme pour la carte des départs, alors que <b>le centre de Paris est principalement réservé au travail</b>, les <b>arrondissements périphériques accueillent les lieux de vie</b> des parisiens.</p>
+<p class="font_explain">On note une <b>plus grande homogénéité au sein des horaires de retour du travail</b>, en comparaison des horaires de départ. En effet, la plupart des quartiers indiquent un horaire de retour moyen des utilisateurs de Vélibs compris <b>entre 17h30 et 18h15</b>. De plus, on note que les habitants du <b>11ème arrondissement, ainsi que ceux du nord des 17ème et 18ème arrondissements rentrent plus tard du travail que la moyenne</b>, entre 18h15 et 20h.</p>
 	<!-- ############################################ -->
 
 	<!-- ################# Explications pour la construction ################# -->
 <div class="construction">
-<p>Pour construire nos cartes, nous avons récupéré les données d’utilisation des Vélibs au cours des mois de février et mars 2016.  Ensuite, nous avons calculé un taux de dégradation ou de bornes inutilisables pour chaque quartier de Paris sur cette période. Nous avons ensuite représenté ces taux de dégradation sur la carte.</p>
+<p>Pour construire nos cartes, nous avons récupéré les données d’utilisation des Vélibs au cours des mois de février et mars 2016.  Ensuite, nous avons traité les données en essayant de repérer l’horaire de l'augmentation du nombre de vélibs le soir, pour chaque station. Une fois cette heure identifiée, nous avons alors pu calculer une heure moyenne de retour pour chaque quartier de Paris. Les quartiers pour lesquels nous n'observons pas une montée du nombre de vélos le soir sont donc considérés comme des quartiers où l'on trouve principalement les lieux de travail des usagers des Vélibs.</p>
 </div>
 	<!-- ############################################ -->
 </center>
@@ -79,3 +79,4 @@ backdround-size : over
 
 </body>
 </html>
+
