@@ -1,11 +1,9 @@
-
-
 <!DOCTYPE html>
 <html lang="fr"><head>
 <meta charset="utf-8">
 
 <link rel="stylesheet" href="http://matthieuctvt.github.io/js/leaflet.css" />
-<link href="jumbotron.css" rel="stylesheet">
+<link href="datavelib.css" rel="stylesheet">
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="http://matthieuctvt.github.io/js/leaflet.js"></script>
@@ -95,7 +93,7 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 	};
 	info.update = function (props) {
      this._div.innerHTML =   (props ?
-                              '<div style="width:300px;"><span style="font-family:Dosis;font-size:1em;">Quartier : ' + props.nom + '</span>&nbsp;<br><span style="color:#08519c;">Taux de dégradation : ' + props.heureDepart_string + '</div>'
+                              '<div style="width:300px;"><span style="font-family:Dosis;font-size:1em;">Quartier : ' + props.nom + '</span>&nbsp;<br><span style="color:#08519c;">Départ au travail : ' + props.heureDepart_string + '</div>'
                                                                                                                           : "<h4>Passez votre souris au dessus d'un quartier</h4>");
 	};
 	info.addTo(map);
