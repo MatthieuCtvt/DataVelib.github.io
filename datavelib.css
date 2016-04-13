@@ -5,7 +5,12 @@ footer{
 } 
 .titre{
  margin-bottom: 10px;
-} 
+}
+
+.corps{
+width:960px;
+margin-top:2cm;
+}
    
 .font{
     font-family: 'Dosis', cursive;
@@ -22,7 +27,7 @@ footer{
     padding: 10px;
          }
          
-.font1{
+.font_explain{
     font-family: 'Dosis', cursive;
     font-size: 20px;
     color:black;
