@@ -3,9 +3,6 @@
 footer{
    margin-top: 2cm;
 }
-body{
-text-align:center; 
-} 
 
 .titre{
  margin-bottom: 10px;
@@ -14,7 +11,6 @@ text-align:center;
 .corps{
 width:960px;
 margin-top:2cm;
-text-align:center;
 }
    
 .font{
