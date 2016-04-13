@@ -2,7 +2,11 @@
  
 footer{
    margin-top: 2cm;
+}
+body{
+text-align:center; 
 } 
+
 .titre{
  margin-bottom: 10px;
 }
