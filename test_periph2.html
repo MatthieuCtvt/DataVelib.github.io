@@ -7,7 +7,7 @@
 
 <meta charset="utf-8">
 
-<title>Qui rentre tôt ?</title>
+<title>L'effet périph'</title>
         
 <!-- ############## Sript pour Analytics  ##############  -->
 <script>
@@ -46,21 +46,23 @@ backdround-size : over
 	<!-- ####################### Titre de la page ########################## -->
         <center>
         <div class="corps">
-        <h3 class="font"><center>Le retour du travail</center></h3>
+        <h3 class="font"><center>L'effet périph'</center></h3>
 	<!-- ################################################################### -->
      
 	<!-- #################### La carte ##################### -->
-<p><iframe frameborder="0" height="440px" scrolling="no" src="http://matthieuctvt.github.io/horaire_retour_carte.html" width="100%"></iframe></p>
+<p><iframe class='highcharts-iframe' src='//cloud.highcharts.com/embed/yzijaq' style='border: 0; width: 100%; height: 500px'></iframe></p>
 	<!-- ############################################ -->
 
 	<!-- ################# Les interprétations de la carte ################# -->
-<p class="font_explain">Globalement, les 8 premiers arrondissements semblent se détacher comme principaux lieux de travail de la capitale : dans ces quartiers, les Vélibs sont retirés le soir. À l’inverse, les 12 autres arrondissements sont clairement des quartiers dans lesquels les gens rentrent chez eux le soir, après le travail. Comme pour la carte des départs, alors que <b>le centre de Paris est principalement réservé au travail</b>, les <b>arrondissements périphériques accueillent les lieux de vie</b> des parisiens.</p>
-<p class="font_explain">On note une <b>plus grande homogénéité au sein des horaires de retour du travail</b>, en comparaison des horaires de départ. En effet, la plupart des quartiers indiquent un horaire de retour moyen des utilisateurs de Vélibs compris <b>entre 17h30 et 18h15</b>. De plus, on note que les habitants du <b>11ème arrondissement, ainsi que ceux du nord des 17ème et 18ème arrondissements rentrent plus tard du travail que la moyenne</b>, entre 18h15 et 20h.</p>
+<p class="font_explain">Durant un jour de semaine, <b>les stations intra-muros se vident le matin contrairement aux extra-muros, qui ont tendance à se remplir</b>. On observe d’ailleurs une symétrie marquante entre les deux courbes aux heures de départ au travail, particulièrement entre 7h et 10h30.</p>
+<p class="font_explain">Le <b> phénomène est inverse le soir, au moment du retour du travail </b>. On observe notamment que la courbe de disponibilité dans les stations extra-muros décroît de nouveau à partir de 17h30, alors que celui des stations intra-muros croît.</p> 
+<p class="font_explain"><b>Finalement, les stations intra-muros ont donc un comportement similaire aux stations des quartiers d’habitation,</b> ce qui semble logique. En revanche,  <b>les stations extra-muros ont un comportement comparable aux stations correspondant aux lieux de travail </b>, et ce malgré la très grande proximité géographique des stations. </p>
+
 	<!-- ############################################ -->
 
 	<!-- ################# Explications pour la construction ################# -->
 <div class="construction">
-<p>Pour construire nos cartes, nous avons récupéré les données d’utilisation des Vélibs au cours des mois de février et mars 2016.  Ensuite, nous avons traité les données en essayant de repérer l’horaire de l'augmentation du nombre de vélibs le soir, pour chaque station. Une fois cette heure identifiée, nous avons alors pu calculer une heure moyenne de retour pour chaque quartier de Paris. Les quartiers pour lesquels nous n'observons pas une montée du nombre de vélos le soir sont donc considérés comme des quartiers où l'on trouve principalement les lieux de travail des usagers des Vélibs.</p>
+<p>Pour construire nos cartes, nous avons récupéré les données d’utilisation des Vélibs au cours des mois de février et mars 2016.  Nous avons ensuite associé les stations autour du périphérique par couple, une intra-muros, une extra-muros. La carte des couples est disponible <a href="../periph.html"> ici </a>. Ensuite, nous avons comparé le taux de disponibilité moyen pour les deux "types" de stations.</p> 
 </div>
 	<!-- ############################################ -->
 </center>
