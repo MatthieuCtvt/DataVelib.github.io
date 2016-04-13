@@ -90,7 +90,7 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 	if (L.Browser.touch) {
 		L.control.touchHover().addTo(map);
 	}
-	// La div qui contient les infos quand on passe par dessus un bureau de vote
+// L'encadré en haut à droite
 	var info = L.control();
 	info.onAdd = function (map) {
 		this._div = L.DomUtil.create('div', 'info');
@@ -103,7 +103,7 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
                                                                                                                           : "<h4>Passez votre souris au dessus d'un quartier</h4>");
 	};
 	info.addTo(map);
-
+// Les couleurs
 	 function getColor(d) {
 		return d > 1  ? '#ff0000' :
 	 	       d > 0.2  ? '#f02020' :
