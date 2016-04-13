@@ -89,3 +89,14 @@ text-align:center;
 .info{
    margin-top: 10cm;
 }
+
+
+.explication {
+          background: #efefef;
+          opacity: 0.5;
+          font-size:14px;
+          color : #000000; 
+          border-style: dotted;
+          padding: 10px;
+          border-width: 1px;          
+}
