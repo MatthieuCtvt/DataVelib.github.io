@@ -164,7 +164,7 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 			click: zoomToFeature
 		});
 	}
-	geojson = L.geoJson(mun31000, {
+	geojson = L.geoJson(datavelib, {
 		style: style,
 		onEachFeature: onEachFeature
 	}).addTo(map);
@@ -184,9 +184,8 @@ path.road { stroke: #FFF; stroke-opacity:0.5;position:relative;z-index:10;fill:n
 		div.innerHTML = labels.join('<br>');
 		return div;
 	};
-//	legend.addTo(map);
 
-// Les routes, glannees chez OSM aussi
+// Pour régler la taille des routes
 var roadSizes = {
   "highway": "3px",
   "major_road": "1px",
@@ -203,4 +202,5 @@ var routes = new L.TileLayer.d3_geoJSON("http://vector.mapzen.com/osm/roads/{z}/
 </script>
 <!-- ################################################################################## -->
 <!-- ################################################################################## -->
-</body></html>
+</body>
+</html>
