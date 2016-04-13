@@ -86,13 +86,13 @@ margin-top:2cm;
    margin-top: 10cm;
 }
 
-
-.explication {
-          background: #efefef;
-          opacity: 0.5;
+.construction {
+          font-family: 'Dosis', cursive;
           font-size:14px;
-          color : #000000; 
+          color:black;
           border-style: dotted;
-          padding: 10px;
-          border-width: 1px;          
+          padding: 8px;
+          border-width: 1px;  
+          text-shadow: #ffffff 0.7px 0.7px, #ffffff -0.7px 0.7px, #ffffff -0.7px -0.7px, #ffffff 0.7px -0.7px;
+          text-align:justify;
 }
