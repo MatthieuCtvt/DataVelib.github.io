@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href="datavelib.css" rel="stylesheet"> 
+
+<meta charset="utf-8">
+
+<title>L'effet périph'</title>
+        
+<!-- ############## Sript pour Analytics  ##############  -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-76105401-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- ############## Style pour l'arrière-plan  ##############  -->       
+<style>
+body{background:url(/gris.jpg) no-repeat center fixed;
+-webkit-background-size: over; 
+-moz-background-size: over;
+-o-background-size: over;
+backdround-size : over
+}
+</style>
+        
+    <!-- ########################################################################## -->
+    
+<body>
+     <!-- ############### Barre de navigation #################### -->       
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+	<div class="navbar-header">
+		<a class="navbar-brand font" href="/index.html">Accueil</a>
+		<a class="navbar-brand font" href="/info.html">En savoir plus</a>
+	</div>
+	</div>
+</nav>
+	<!-- ################################################################### -->
+     
+	<!-- ####################### Titre de la page ########################## -->
+        <center>
+        <div class="corps">
+        <h3 class="font"><center>L'effet périph'</center></h3>
+	<!-- ################################################################### -->
+     
+	<!-- #################### La carte ##################### -->
+<p><iframe class='highcharts-iframe' src='//cloud.highcharts.com/embed/yzijaq' style='border: 0; width: 100%; height: 500px'></iframe></p>
+	<!-- ############################################ -->
+
+	<!-- ################# Les interprétations de la carte ################# -->
+<p class="font_explain">Durant un jour de semaine, <b>les stations intra-muros se vident le matin contrairement aux extra-muros, qui ont tendance à se remplir</b>. On observe d’ailleurs une symétrie marquante entre les deux courbes aux heures de départ au travail, particulièrement entre 7h et 10h30.</p>
+<p class="font_explain">Le <b> phénomène est inverse le soir, au moment du retour du travail </b>. On observe notamment que la courbe de disponibilité dans les stations extra-muros décroît de nouveau à partir de 17h30, alors que celui des stations intra-muros croît.</p> 
+<p class="font_explain"><b>Finalement, les stations intra-muros ont donc un comportement similaire aux stations des quartiers d’habitation,</b> ce qui semble logique. En revanche,  <b>les stations extra-muros ont un comportement comparable aux stations correspondant aux lieux de travail </b>, et ce malgré la très grande proximité géographique des stations. </p>
+
+	<!-- ############################################ -->
+
+	<!-- ################# Explications pour la construction ################# -->
+<div class="construction">
+<p>Pour construire nos cartes, nous avons récupéré les données d’utilisation des Vélibs au cours des mois de février et mars 2016.  Nous avons ensuite associé les stations autour du périphérique par couple, une intra-muros, une extra-muros. La carte des couples est disponible <a href="../periph.html"> ici </a>. Ensuite, nous avons comparé le taux de disponibilité moyen pour les deux "types" de stations.</p> 
+</div>
+	<!-- ############################################ -->
+</center>
+
+    <!-- ############ Le footer ################## -->
+    <footer class="text-accueil">
+        <p class="font">&copy; 2016 Data-Velib - <a href="mailto:datavelib@gmail.com">datavelib@gmail.com</a></p>
+    </footer>
+    <!-- ########################################## -->
+            
+        </div>
+
+    <!-- ################################################################## -->
+
+</body>
+</html>

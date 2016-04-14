@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href="datavelib.css" rel="stylesheet"> 
+
+<meta charset="utf-8">
+
+<title>Les matinaux</title>
+        
+<!-- ############## Sript pour Analytics  ##############  -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-76105401-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- ############## Style pour l'arrière-plan  ##############  -->       
+<style>
+body{background:url(/gris.jpg) no-repeat center fixed;
+-webkit-background-size: over; 
+-moz-background-size: over;
+-o-background-size: over;
+backdround-size : over
+}
+</style>
+        
+    <!-- ########################################################################## -->
+    
+<body>
+     <!-- ############### Barre de navigation #################### -->       
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+	<div class="navbar-header">
+		<a class="navbar-brand font" href="/index.html">Accueil</a>
+		<a class="navbar-brand font" href="/info.html">En savoir plus</a>
+	</div>
+	</div>
+</nav>
+	<!-- ################################################################### -->
+     
+	<!-- ####################### Titre de la page ########################## -->
+        <center>
+        <div class="corps">
+        <h3 class="font"><center>Le départ au travail</center></h3>
+	<!-- ################################################################### -->
+     
+	<!-- #################### La carte ##################### -->
+<p><iframe frameborder="0" height="440px" scrolling="no" src="http://matthieuctvt.github.io/horaire_carte.html" width="100%"></iframe></p>
+	<!-- ############################################ -->
+
+	<!-- ################# Les interprétations de la carte ################# -->
+<p class="font_explain">Globalement, les 8 premiers arrondissements semblent se détacher comme les principaux lieux de travail de la capitale : dans ces quartiers, les Vélibs sont déposés le matin. À l’inverse, les 12 autres arrondissements sont clairement des quartiers dans lesquels les gens prennent leur Vélib le matin pour se rendre au travail. Ainsi, alors que le <b>centre de Paris est principalement réservé au travail</b>, les <b>arrondissements périphériques accueillent les lieux de vie</b> des parisiens.</p>
+<p class="font_explain">On note que le <b>nord-est de Paris</b> part en moyenne plus tard au travail que le reste de la capitale. A l’inverse, le <b>sud des 13ème, 14ème et 15ème arrondissements</b> de Paris se lève très tôt ! Faites vous votre propre avis en parcourant notre carte interactive !</p>
+	<!-- ############################################ -->
+
+	<!-- ################# Explications pour la construction ################# -->
+<div class="construction">
+<p>Pour construire nos cartes, nous avons récupéré les données d’utilisation des Vélibs au cours des mois de février et mars 2016.  Ensuite, nous avons traité les données en essayant de repérer l’horaire de la « chute » du nombre de vélibs le matin, pour chaque station. Une fois cette heure identifiée, nous avons alors pu calculer une heure moyenne de départ pour chaque quartier de Paris. Les quartiers pour lesquels nous n'observons pas de chute du nombre de Vélibs le matin sont donc considérés comme des quartiers où les usagers des Vélibs travaillent.</p>
+<p>Inspiration des cartes : <a href="http://www.passiondataviz.fr">PassionDataviz</a></p>
+</div>
+	<!-- ############################################ -->
+</center>
+
+    <!-- ############ Le footer ################## -->
+    <footer class="text-accueil">
+        <p class="font">&copy; 2016 Data-Velib - <a href="mailto:datavelib@gmail.com">datavelib@gmail.com</a></p>
+    </footer>
+    <!-- ########################################## -->
+            
+        </div>
+
+    <!-- ################################################################## -->
+
+</body>
+</html>

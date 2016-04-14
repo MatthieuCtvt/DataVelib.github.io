@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href="datavelib.css" rel="stylesheet"> 
+
+<meta charset="utf-8">
+
+<title>Les dégradations</title>
+        
+<!-- ############## Sript pour Analytics  ##############  -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-76105401-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- ############## Style pour l'arrière-plan  ##############  -->       
+<style>
+body{background:url(/gris.jpg) no-repeat center fixed;
+-webkit-background-size: over; 
+-moz-background-size: over;
+-o-background-size: over;
+backdround-size : over
+}
+</style>
+        
+    <!-- ########################################################################## -->
+    
+<body>
+     <!-- ############### Barre de navigation #################### -->       
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+	<div class="navbar-header">
+		<a class="navbar-brand font" href="/index.html">Accueil</a>
+		<a class="navbar-brand font" href="/info.html">En savoir plus</a>
+	</div>
+	</div>
+</nav>
+	<!-- ################################################################### -->
+     
+	<!-- ####################### Titre de la page ########################## -->
+        <center>
+        <div class="corps">
+        <h3 class="font"><center>Les taux de dégradation par quartier</center></h3>
+	<!-- ################################################################### -->
+     
+	<!-- #################### La carte ##################### -->
+<p><iframe frameborder="0" height="440px" scrolling="no" src="http://matthieuctvt.github.io/degradation_carte.html" width="100%"></iframe></p>
+	<!-- ############################################ -->
+
+	<!-- ################# Les interprétations de la carte ################# -->
+<p class="font_explain">Le taux de Vélibs dégradés ou inutilisables peut considérablement varier d’un quartier à un autre. On observe que <b>la rive gauche semble globalement épargnée</b> par les dégradations et les stations inutilisables : seuls les quartiers École militaire et Violet-Commerce affichent des taux de dégradation supérieurs à 3%.</p>
+<p class="font_explain"><b>Rive droite, le constat est tout autre, et les inégalités sont grandes.</b> Alors que le <b>16ème arrondissement a un taux de dégradation de 0%</b>, le nord-est de Paris est grandement défavorisé ! Tous les quartiers des <b>11ème et 20ème arrondissements ont un taux de dégradation positif</b>, avec une pointe à 9% dans le quartier Gambetta.</p>
+<p class="font_explain">Mais <b>les pires taux de dégradation sont à noter dans les quartiers du nord des 18ème et 19ème arrondissements</b>. Alors que le quartier Moscowa - Porte Montmartre - Porte de Clignancourt affiche un taux de 11%, on monte à 13% à Danube, et <b>on atteint même des sommets avec les 22% du quartier Pont de Flandre</b> !</p>
+<p class="font_explain">Alors, mauvaise utilisation des usagers des Vélibs, ou entretien préférentiel de certains quartiers ? Faites vous votre opinion en parcourant notre carte !</p>
+	<!-- ############################################ -->
+
+	<!-- ################# Explications pour la construction ################# -->
+<div class="construction">
+<p>Pour construire nos cartes, nous avons récupéré les données d’utilisation des Vélibs au cours des mois de février et mars 2016.  Ensuite, nous avons calculé un taux de dégradation ou de bornes inutilisables pour chaque quartier de Paris sur cette période. Nous avons ensuite représenté ces taux de dégradation sur la carte.</p>
+<p>Inspiration des cartes : <a href="http://www.passiondataviz.fr">PassionDataviz</a></p>
+</div>
+	<!-- ############################################ -->
+</center>
+
+    <!-- ############ Le footer ################## -->
+    <footer class="text-accueil">
+        <p class="font">&copy; 2016 Data-Velib - <a href="mailto:datavelib@gmail.com">datavelib@gmail.com</a></p>
+    </footer>
+    <!-- ########################################## -->
+            
+        </div>
+
+    <!-- ################################################################## -->
+
+</body>
+</html>
