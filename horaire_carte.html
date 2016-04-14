@@ -17,7 +17,7 @@
 
 		.info {
 			padding: 6px 8px;
-			font: 14px/16px Arial, Helvetica, sans-serif;
+			font: 14px/16px Dosis;
 			background: white;
 			background: rgba(255,255,255,0.8);
 			box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -86,7 +86,7 @@
 
 	info.update = function (props) {
     this._div.innerHTML = (props ?
-        '<b>' + props.name + '</span>&nbsp;<br><span style="color:#08519c;">Départ au travail : ' + props.heureDepart_string : "<h4>Passez votre souris au dessus d'un quartier</h4>"
+        '<b>' + props.name + '</span>&nbsp;<br><span style="font-family:Dosis;color:#08519c;">Départ au travail : ' + props.heureDepart_string : "<h4>Passez votre souris au dessus d'un quartier</h4>"
         );
 };
 
