@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href="datavelib.css" rel="stylesheet"> 
+
+<meta charset="utf-8">
+
+<title>Les Vélibs disponibles</title>
+        
+<!-- ############## Sript pour Analytics  ##############  -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-76105401-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- ############## Style pour l'arrière-plan  ##############  -->       
+<style>
+body{background:url(/gris.jpg) no-repeat center fixed;
+-webkit-background-size: over; 
+-moz-background-size: over;
+-o-background-size: over;
+backdround-size : over
+}
+
+</style>
+        
+    <!-- ########################################################################## -->
+    
+<body>
+     <!-- ############### Barre de navigation #################### -->       
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+	<div class="navbar-header">
+		<a class="navbar-brand font" href="/index.html">Accueil</a>
+		<a class="navbar-brand font" href="/info.html">En savoir plus</a>
+	</div>
+	</div>
+</nav>
+	<!-- ################################################################### -->
+     
+	<!-- ####################### Titre de la page ########################## -->
+        <center>
+        <div class="corps">
+        <h3 class="font"><center>À quelle heure chercher un Vélib ?</center></h3>
+	<!-- ################################################################### -->
+     
+	<!-- #################### La carte ##################### -->
+<p><iframe class='highcharts-iframe' src='//cloud.highcharts.com/embed/edawuw' style='border: 0; width: 100%; height: 500px'></iframe></p>
+	<!-- ############################################ -->
+
+	<!-- ################# Les interprétations de la carte ################# -->
+<p class="font_explain">Ce sont durant les heures de départ au travail qu'il y a le moins de Vélibs disponibles au cours de la journée. On remarque que le <b>pic est très marqué autour de 8h50</b>. L’autre moment critique de la journée pour emprunter un Vélib correspond aux horaires de retour du travail. Toutefois, on note que <b>la courbe est plus étalée que le matin, avec un nombre minimal de Vélibs disponibles stable entre 18h30 et 19h30</b>.</p>
+<p class="font_explain">Le week-end, on remarque que les variations au cours de la journée sont moins importantes. Notons tout de même ce qui ressemble à un <b>« effet dernier métro » vers 2h du matin</b>, le nombre de Vélib baisse, puis remonte après l’heure du dernier métro.</p>
+	<!-- ############################################ -->
+
+	<!-- ################# Explications pour la construction ################# -->
+<div class="construction">
+<p>Pour construire nos cartes, nous avons récupéré les données d’utilisation des Vélibs au cours des mois de février et mars 2016.  Nous avons ensuite fait la moyenne du nombre de Vélibs pour chaque moment de la journée, en différenciant la semaine du week-end.</p>
+</div>
+
+	<!-- ############################################ -->
+</center>
+
+    <!-- ############ Le footer ################## -->
+    <footer class="text-accueil">
+        <p class="font">&copy; 2016 Data-Velib - <a href="mailto:datavelib@gmail.com">datavelib@gmail.com</a></p>
+    </footer>
+    <!-- ########################################## -->
+            
+        </div>
+
+    <!-- ################################################################## -->
+
+</body>
+</html>
